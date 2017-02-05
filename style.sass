@@ -7,6 +7,10 @@ $benefits-color: #313332
 
 $font-page: 'Open Sans', sans-serif
 
+$break-small: 767px
+$break-medium: 768px
+$break-large: 1199px
+	
 =transition($time)
 	-webkit-transition: $time ease-in-out
 	-moz-transition:    $time ease-in-out
@@ -144,7 +148,6 @@ footer
 header 
 	background-color: $nav-color
 	height: auto
-	background-color: rgba(0, 0, 0, 0.5)
 
 nav 
 	background-color: $nav-color
@@ -480,239 +483,237 @@ footer
 	background-color: #4183C4
 	color: $basic-color
 	transform: scale(1.2)
-
-@media(min-width: 768px) and (max-width: 1199px) 
-.col-m-1 
-	width: 8.33%
-.col-m-2 
-	width: 16.66%
-.col-m-3 
-	width: 25%
-.col-m-4 
-	width: 33.33%
-.col-m-5 
-	width: 41.66%
-.col-m-6 
-	width: 50%
-.col-m-7 
-	width: 58.33%
-.col-m-8 
-	width: 66.66%
-.col-m-9 
-	width: 75%
-.col-m-10 
-	width: 83.33%
-.col-m-11 
-	width: 91.66%
-.col-m-12 
-	width: 100%
-    
-header > nav ul > li > a 
-	line-height: 50px
-	display: block
-	color: $basic-color
-	padding: 0 3px
-	text-decoration: none
-	text-transform: uppercase
-
-/* BENEFITS */
-
-.light:hover 
-	.icons 
-		background-color: $benefits-color
-
-	h2 
-		color: $benefits-color
-
-/* GALLERY */
-
-.gallery-image 
-	i 
+	
+@media(min-width: $break-medium) and (max-width: $break-large)
+	.col-m-1 
+		width: 8.33%
+	.col-m-2 
+		width: 16.66%
+	.col-m-3 
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6 
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11 
+		width: 91.66%
+	.col-m-12 
+		width: 100%
+		
+	header > nav ul > li > a 
+		line-height: 50px
+		display: block
 		color: $basic-color
-		line-height: 500px
+		padding: 0 3px
+		text-decoration: none
+		text-transform: uppercase
 
-.gallery-image:hover 
-	.layer 
-		background-color: rgba(0,0,0,0)
+	/* BENEFITS */
 
-/* PEOPLE */
+	.light:hover 
+		.icons 
+			background-color: $benefits-color
 
-.team 
-	text-align: center
+		h2 
+			color: $benefits-color
 
-	h4 
+	/* GALLERY */
+
+	.gallery-image 
+		i 
+			color: $basic-color
+			line-height: 500px
+
+	.gallery-image:hover 
+		.layer 
+			background-color: rgba(0,0,0,0)
+
+	/* PEOPLE */
+
+	.team 
 		text-align: center
-		visibility: visible
-		bottom: 15px
-		color: #5a5b5c
+
+		h4 
+			text-align: center
+			visibility: visible
+			bottom: 15px
+			color: #5a5b5c
+
+		.team:hover 
+			img 
+				opacity: 1
+
+	/* IMAGE-SECTION */
+
+	.image-section 
+		height: 170px
+
+	.image-section 
+		.bottom-image 
+			img 
+				max-width: 200px
+
+	.bottom-text 
+		h2 
+			font-size: 15px
+
+@media (max-width: $break-small)
+	.col-s-1 
+		width: 8.33%
+	.col-s-2 
+		width: 16.66%
+	.col-s-3 
+		width: 25%
+	.col-s-4 
+		width: 33.33%
+	.col-s-5 
+		width: 41.66%
+	.col-s-6 
+		width: 50%
+	.col-s-7 
+		width: 58.33%
+	.col-s-8 
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10 
+		width: 83.33%
+	.col-s-11 
+		width: 91.66%
+	.col-s-12 
+		width: 100%
+	.col-offset-s-0 
+		margin-left: 0
+
+	header > nav ul > li 
+		display: inline
+
+	header > nav ul 
+		float: none
+		list-style-type: none
+		margin: 0
+		padding: 0
+
+	header > nav img 
+		display: block
+		margin: 0 auto
+
+	header > nav ul > li > a 
+		background-color: #3c3d3f
+		text-align: center
+
+	.nav-small 
+		text-align: center
+
+	/* BENEFITS */
+
+	.light:hover 
+		.icons 
+			background-color: $benefits-color
+
+	.light:hover 
+		h2 
+			color: $benefits-color
+
+	/* GALLERY */
+
+	.gallery-image 
+		i 
+			color: $basic-color
+			line-height: 500px
+
+	.gallery-image:hover 
+		.layer 
+			background-color: rgba(0,0,0,0)
+
+	/* PEOPLE */
+
+	.team 
+		text-align: center
+
+		h4 
+			text-align: center
+			visibility: visible
+			bottom: 15px
+			color: #5a5b5c
 
 	.team:hover 
 		img 
 			opacity: 1
 
-/* IMAGE-SECTION */
+	/* IMAGE-SECTION */
 
-.image-section 
-	height: 170px
+	.image-section 
+		height: 350px
 
-.image-section 
-	.bottom-image 
-		img 
-			max-width: 200px
+		.bottom-image
+			text-align: center
+			
+			img 
+				max-width: 200px
 
-.bottom-text 
-	h2 
-		font-size: 15px
+	.bottom-text 
+		h2 
+			font-size: 15px
+			text-align: center
 
-@media (max-width: 767px) 
-.col-s-1 
-	width: 8.33%
-.col-s-2 
-	width: 16.66%
-.col-s-3 
-	width: 25%
-.col-s-4 
-	width: 33.33%
-.col-s-5 
-	width: 41.66%
-.col-s-6 
-	width: 50%
-.col-s-7 
-	width: 58.33%
-.col-s-8 
-	width: 66.66%
-.col-s-9 
-	width: 75%
-.col-s-10 
-	width: 83.33%
-.col-s-11 
-	width: 91.66%
-.col-s-12 
-	width: 100%
-.col-offset-s-0 
-	margin-left: 0
+	/* FOOTER */
 
-/* MENU */
+	footer 
+		h4 
+			text-align: left
 
- header > nav ul > li 
-  display: inline
+	.twitter 
+		transform: scale(1.5)
+		margin: 20px
 
-header > nav ul 
-	float: none
-	list-style-type: none
-	margin: 0
-	padding: 0
+	.facebook 
+		transform: scale(1.5)
+		margin: 20px
 
-header > nav img 
-	display: block
-	margin: 0 auto
+	.google-plus 
+		transform: scale(1.5)
+		margin: 20px
+	   
+	.instagram 
+		transform: scale(1.5)
+		margin: 20px
 
-header > nav ul > li > a 
-	background-color: #3c3d3f
-	text-align: center
+	.github 
+		transform: scale(1.5)
+		margin: 20px
 
-.nav-small 
-	text-align: center
-
-/* BENEFITS */
-
-.light:hover 
-	.icons 
-		background-color: $benefits-color
-
-.light:hover 
-	h2 
-		color: $benefits-color
-
-/* GALLERY */
-
-.gallery-image 
-	i 
+	.twitter:hover 
+		background-color: $social-color
 		color: $basic-color
-		line-height: 500px
+		transform: scale(1.5)
 
-.gallery-image:hover 
-	.layer 
-		background-color: rgba(0,0,0,0)
+	.facebook:hover 
+		background-color: $social-color
+		color: $basic-color
+		transform: scale(1.5)
 
-/* PEOPLE */
+	.google-plus:hover 
+		background-color: $social-color
+		color: $basic-color
+		transform: scale(1.5)
 
-.team 
-	text-align: center
+	.instagram:hover 
+		background-color: $social-color
+		color: $basic-color
+		transform: scale(1.5)
 
-	h4 
-		text-align: center
-		visibility: visible
-		bottom: 15px
-		color: #5a5b5c
-
-.team:hover 
-	img 
-		opacity: 1
-
-/* IMAGE-SECTION */
-
-.image-section 
-	height: 350px
-
-	.bottom-image
-		text-align: center
-		
-		img 
-			max-width: 200px
-
-.bottom-text 
-	h2 
-		font-size: 15px
-		text-align: center
-
-/* FOOTER */
-
-footer 
-	h4 
-		text-align: left
-
-.twitter 
-	transform: scale(1.5)
-	margin: 20px
-
-.facebook 
-	transform: scale(1.5)
-	margin: 20px
-
-.google-plus 
-	transform: scale(1.5)
-	margin: 20px
-   
-.instagram 
-	transform: scale(1.5)
-	margin: 20px
-
-.github 
-	transform: scale(1.5)
-	margin: 20px
-
-.twitter:hover 
-	background-color: $social-color
-	color: $basic-color
-	transform: scale(1.5)
-
-.facebook:hover 
-	background-color: $social-color
-	color: $basic-color
-	transform: scale(1.5)
-
-.google-plus:hover 
-	background-color: $social-color
-	color: $basic-color
-	transform: scale(1.5)
-
-.instagram:hover 
-	background-color: $social-color
-	color: $basic-color
-	transform: scale(1.5)
-
-.github:hover 
-	background-color: $social-color
-	color: $basic-color
-	transform: scale(1.5)
+	.github:hover 
+		background-color: $social-color
+		color: $basic-color
+		transform: scale(1.5)
